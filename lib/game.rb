@@ -9,7 +9,7 @@ class Game
   def round(players_array)
     players_array.each do |player|
       Show.new(@new_board.cells)
-      puts "#{player.name} à toi de jouer : a1 / a2 / a3 / b1 / b2 / b3 / c1 / c2 / c3"
+      puts "#{player.name} à toi de jouer : A1 / A2 / A3 / B1 / B2 / B3 / C1 / C2 / C3"
   
       print "> "
       user_answer = gets.chomp
@@ -17,7 +17,7 @@ class Game
       cell = BoardCase.new #ma cellule avec  attributs : empty, X , O
       # @new_board.cells[user_answer] = player.order == 1 ? cell.player1 : cell.player2
       loop do #pour pouvoir boucler tant que la la réponse n'est pas approprié
-      wrong_answer = user_answer != "a1" && user_answer != "a2" && user_answer != "a3" && user_answer != "b1" && user_answer != "b2" && user_answer != "b3" && user_answer != "c1" && user_answer != "c2" && user_answer != "c3"
+      wrong_answer = user_answer != "A1" && user_answer != "A2" && user_answer != "A3" && user_answer != "B1" && user_answer != "B2" && user_answer != "B3" && user_answer != "C1" && user_answer != "C2" && user_answer != "C3"
 
         if wrong_answer
           puts "Réponse incorrecte tête de cul, recommence !"
