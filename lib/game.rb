@@ -1,11 +1,12 @@
 class Game
-  attr_accessor :cells
+  attr_accessor :new_board
 
-  def initialize(cells)
-    #créer le plateau de jeux
-    @cells = cells
-    Show.new(@cells)
+  def initialize
+    @new_board = Board.new #créer le hash avec mes keys du  jeu + values empty
+    Show.new(@new_board.cells)
+    
   end
+
 
   def menu(player)
     puts "
@@ -15,14 +16,10 @@ class Game
     print "> "
     user_answer = gets.chomp
     
-    cell = BoardCase.new
-    #binding.pry
-    @cells[user_answer] = player.order == 1 ? cell.player1 : cell.player2
+    cell = BoardCase.new #ma cellule avec  attributs : empty, X , O
+    @new_board.cells[user_answer] = player.order == 1 ? cell.player1 : cell.player2
   
-    Show.new(@cells)
-
+    Show.new(@new_board.cells)
   end
-  
-
 
 end
