@@ -42,5 +42,14 @@ i = 1
 while true
   puts "\e[4m#{"Partie n°#{i}"}\e[0m :" #Partie souligné et avec un chiffre qui évolue
   new_game.round(players_array)
+  
+  #condition de victoire
+  #if 3 cases adjacentes (array) sont égales && 3 cases différentes de empty
+  # puts Victory
+  # break
+  #else
+  #end
+
+
   i += 1
 end

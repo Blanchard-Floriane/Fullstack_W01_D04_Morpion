@@ -18,7 +18,7 @@ class Game
       # @new_board.cells[user_answer] = player.order == 1 ? cell.player1 : cell.player2
       loop do #pour pouvoir boucler tant que la la réponse n'est pas approprié
       wrong_answer = user_answer != "a1" && user_answer != "a2" && user_answer != "a3" && user_answer != "b1" && user_answer != "b2" && user_answer != "b3" && user_answer != "c1" && user_answer != "c2" && user_answer != "c3"
-      
+
         if wrong_answer
           puts "Réponse incorrecte tête de cul, recommence !"
           print "> "
