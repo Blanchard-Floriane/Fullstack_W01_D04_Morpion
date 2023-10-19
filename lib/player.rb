@@ -1,8 +1,8 @@
 class Player
-  attr_accessor :first_name, :order
+  attr_accessor :name, :order
 
-  def initialize(first_name, order)
-    @first_name = first_name
+  def initialize(name, order)
+    @name = name
     @order = order
   end
 end
