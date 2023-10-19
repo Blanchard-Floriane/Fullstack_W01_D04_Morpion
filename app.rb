@@ -40,7 +40,7 @@ system 'clear'
 
 i = 1
 while true
-  puts "\e[4m#{"Partie n°#{i}"}\e[0m :"
-  new_game.menu(players_array)
+  puts "\e[4m#{"Partie n°#{i}"}\e[0m :" #Partie souligné et avec un chiffre qui évolue
+  new_game.round(players_array)
   i += 1
 end
